@@ -5,8 +5,8 @@ import {
   Routes
 } from "react-router-dom";
 
-import Home from "./scenes/Home/Home"
-import Flow from "./scenes/Flow/Flow"
+import Home from "scenes/Home/Home"
+import Flow from "scenes/Flow/Flow"
 
 export default function BasicExample() {
   return (

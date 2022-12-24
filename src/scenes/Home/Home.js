@@ -1,10 +1,18 @@
 import React from 'react';
 function Home() {
   return (
-    <div className="home">
-      <h1>App test</h1>
-    </div>
+    <nav className="home">
+      <ul>
+        <li>Rompehielos</li>
+        <li>Conexión</li>
+        <li>Intimidad</li>
+        <li>Incendiarias</li>
+        <li>Personalizadas</li>
+      </ul>
+    </nav>
   );
 }
+
+// conexion, intimidad, rompehielos, incendiarias, custom
 
 export default Home;
