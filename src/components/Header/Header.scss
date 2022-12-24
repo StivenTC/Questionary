@@ -1,1 +1,21 @@
-.home {}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  background-color: $clouds;
+  box-shadow: $shadow;
+  border-radius: 0 0 0 2rem;
+  >img{
+    width: 2rem;
+    height: 2rem;
+  }
+  >h1{
+    color: $asbesto;
+    font-size: 1.2rem;
+  }
+  >svg{
+    font-size: 2rem;
+    color: $asbesto;
+  }
+}

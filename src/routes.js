@@ -7,10 +7,12 @@ import {
 
 import Home from "scenes/Home/Home"
 import Flow from "scenes/Flow/Flow"
+import Header from "components/Header/Header";
 
 export default function BasicExample() {
   return (
     <Router>
+      <Header />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/flow" element={<Flow />} />

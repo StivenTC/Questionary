@@ -1,13 +1,18 @@
-$font: 'Montserrat',
-sans-serif;
+$font: 'Quicksand', sans-serif;
 $primary: #333;
 $secondary: #999;
 
 //Breakpoints
-$desktop: '1367px';
-$laptop: '1220px';
-$medium: '1025px';
-$tablet: '770px';
-$mobile: '451px';
+$desktop: 1367px;
+$laptop: 1220px;
+$medium: 1025px;
+$tablet: 770px;
+$mobile: 451px;
+
+// shadows
+$shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
 
 //colors
+$clouds: #ecf0f1;
+$asbesto: #95a5a6
