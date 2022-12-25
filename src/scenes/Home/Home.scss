@@ -1,1 +1,70 @@
-.home {}
+.home {
+  height: 100%;
+  overflow: hidden;
+  background-color: $icebreaker;
+
+  >ul {
+    display: block;
+    height: calc(100% - 3rem);
+    margin-top: 3rem;
+
+    >li {
+      position: relative;
+      @include flex-center;
+      border-radius: 0 0 0 3rem;
+      height: 20%;
+      overflow: hidden;
+      box-shadow: $shadow;
+
+      >h2 {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: $whitecity;
+        letter-spacing: .5rem;
+        opacity: 0.8;
+        //text-shadow: 1px 1px 2px $clouds;
+      }
+
+      svg {
+        font-size: 12rem;
+        position: absolute;
+        right: -4rem;
+        bottom: -5rem;
+        opacity: 0.2;
+      }
+
+      &:not(:first-child) {
+        height: calc(20% + 3rem);
+        padding-top: 3rem;
+        margin-top: -3rem;
+      }
+
+      &:first-child {
+        z-index: 5;
+        background: $icebreaker;
+      }
+
+      &:nth-child(2) {
+        z-index: 4;
+        background: $connection;
+      }
+
+      &:nth-child(3) {
+        z-index: 3;
+        background: $intimacy;
+      }
+
+      &:nth-child(4) {
+        z-index: 2;
+        background: $firestarter;
+      }
+
+      &:nth-child(5) {
+        z-index: 1;
+        background: $custom;
+        border-radius: 0;
+      }
+    }
+  }
+
+}
