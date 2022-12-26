@@ -1,1 +1,22 @@
-.home {}
+.modal {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  @include vert-center;
+
+  &-backdrop {
+    position: absolute;
+    inset: 0;
+    background: #333;
+    opacity: 0.9;
+  }
+
+  &-container {
+    z-index: inherit;
+    position: relative;
+    overflow: hidden;
+    margin-top: 12rem;
+  }
+}
