@@ -1,5 +1,73 @@
 .group {
-  width: 5rem;
-  height: 9rem;
-  background-color: aqua;
+  width: 18rem;
+  height: auto;
+  background-color: $clouds;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 2rem;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  >ul {
+    color: $midnight;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    background: $whitecity;
+    border-radius: 1rem;
+
+    >li {
+      position: relative;
+      @include flex-center;
+      justify-content: flex-start;
+      padding: .5rem 1rem;
+      text-transform: capitalize;
+
+      >svg:first-child {
+        margin-right: .5rem;
+        opacity: 0.5;
+      }
+
+      >svg:last-child {
+        margin-left: auto;
+        color: $firestarter;
+        opacity: .7;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 90%;
+        height: 1px;
+        bottom: 0;
+        background-color: $clouds;
+      }
+    }
+
+  }
+
+  >label {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    >input {
+      padding: 0.5rem 1rem;
+      border: none;
+      width: 100%;
+      box-shadow: $shadow;
+      border-radius: 2rem;
+      margin: 0 auto;
+      color: $midnight;
+    }
+
+    >svg {
+      position: absolute;
+      right: 1rem;
+      opacity: 0.6;
+      font-size: 1.2rem;
+      //margin-left: -2rem;
+    }
+  }
 }
