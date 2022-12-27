@@ -8,7 +8,9 @@ import { HomeItems } from 'utils/items';
 
 function Question() {
   const [searchParams] = useSearchParams();
-  const [list, setList] = useState([]);
+  const [list, setList] = useState();
+  const [currentPlayer, setCurrentPlayer] = useState(0);
+  const [players] = useState(JSON.parse(localStorage.getItem('players')) || ['anonimo']);
   const [currentQuestion, setCurrentQuestion] = useState("");
   const [headerData, setHeaderData] = useState({ icon: '', name: '', random: '' });
   const typeQuestions = searchParams.get('type');
@@ -23,7 +25,7 @@ function Question() {
 
   useEffect(() => {
     const q = listQuestions[typeQuestions]
-    setList(q)
+    setList(q);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -31,6 +33,7 @@ function Question() {
     let random = ~~(Math.random() * list.length);
     setCurrentQuestion(list[random])
     getTypeQuestion(random);
+    getCurrentPlayer();
   }
 
   const getTypeQuestion = (random) => {
@@ -65,20 +68,30 @@ function Question() {
     }
   }
 
+  const getCurrentPlayer = () => {
+    const actual = currentPlayer;
+    if (actual < players.length - 1) {
+      setCurrentPlayer(prev => prev + 1);
+    } else {
+      setCurrentPlayer(0);
+    }
+
+  }
+
   return (
-    <section className="questions">
-      <h1>Otro componente</h1>
-      <div className='card'>
+    <section className={`questions ${headerData.name}`}>
+      {currentQuestion && <div className='card'>
+        <div className='card-player'>{players[currentPlayer]}</div>
         <div className='card-header'>
           {headerData.icon}
           <h3>{headerData.name}</h3>
-          <p>{headerData.number}</p>
+          <p>#{headerData.number}</p>
         </div>
         <div className='card-content'>
           <p>{currentQuestion}</p>
         </div>
-      </div>
-      <button onClick={nextRandomQuestion}> Siguiente </button>
+      </div>}
+      <button onClick={nextRandomQuestion}> {currentQuestion ? 'Siguiente' : 'Iniciar'} </button>
     </section>
   );
 }

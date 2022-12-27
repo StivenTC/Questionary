@@ -6,13 +6,6 @@ import { TbTrashX } from 'react-icons/tb';
 function Groups() {
   const [players, setPlayers] = useState(JSON.parse(localStorage.getItem('players')) || []);
 
-  // useEffect(() => {
-  //   const items = JSON.parse(localStorage.getItem('players'));
-  //   if (items) {
-  //     setPlayers(items);
-  //   }
-  // }, []);
-
   useEffect(() => {
     if (players) {
       localStorage.setItem('players', JSON.stringify(players));

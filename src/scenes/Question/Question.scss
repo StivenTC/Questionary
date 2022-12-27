@@ -1,10 +1,108 @@
 .questions {
   padding-top: 3rem;
-
-  background-color: aqua;
+  background-color: $clouds;
   height: 100%;
+  text-align: center;
 
-  .card {}
+  .card {
+    position: relative;
+    padding: 1rem 1.5rem;
+    background: $whitecity;
+    border-radius: 2rem;
+    width: 80%;
+    margin: 5rem auto 1rem;
+    box-shadow: $shadow;
+    color: $asbesto;
+    color: inherit;
+    transition: all .2s ease-in;
 
-  >button {}
+    &-header {
+      padding: .5rem .5rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      height: 2rem;
+      border-bottom: 1px solid $clouds;
+
+      svg {
+        margin-right: .5rem;
+      }
+
+      >h3 {
+        margin-right: .5rem;
+        letter-spacing: 0.1rem;
+      }
+    }
+
+    &-content {
+      transition: all .5s ease;
+      min-height: 15rem;
+      padding: 2rem 1rem;
+      @include flex-center;
+
+      >p {
+        transition: all 1s ease;
+        color: $midnight;
+        font-weight: bolder;
+        text-align: center;
+        font-size: larger;
+        letter-spacing: .1rem;
+        line-height: 1.5rem;
+      }
+    }
+
+    &-player {
+      position: absolute;
+      top: -1.5rem;
+      left: 7.5%;
+      padding: 0.5rem 1.5rem;
+      background: $whitecity;
+      border-radius: 1rem 1rem 0 0;
+      width: 85%;
+      color: $asbesto;
+      opacity: .8;
+      font-size: smaller;
+      text-transform: capitalize;
+    }
+  }
+
+  &.Intimidad,
+  &.Incendiarias,
+  &.Conexión,
+  &.Rompehielos {
+    transition: all .5s ease-in;
+    background-color: $intimacy;
+    color: $intimacy;
+  }
+
+  &.Incendiarias {
+    background-color: $firestarter;
+    color: $firestarter;
+  }
+
+  &.Conexión {
+    background-color: $connection;
+    color: $connection;
+  }
+
+  &.Rompehielos {
+    background-color: $icebreaker;
+    color: $icebreaker;
+  }
+
+
+  >button {
+    position: relative;
+    margin: 2rem auto 0;
+    padding: 1rem 1.5rem;
+    border-radius: 4rem;
+    width: 10rem;
+    background: $whitecity;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    box-shadow: $shadow;
+    font-weight: bolder;
+    color: $asbesto;
+    color: inherit;
+  }
 }
