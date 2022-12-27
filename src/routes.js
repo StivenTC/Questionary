@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 
 import Home from "scenes/Home/Home"
-import Flow from "scenes/Flow/Flow"
+import Question from "scenes/Question/Question"
 import Header from "components/Header/Header";
 
 export default function BasicExample() {
@@ -15,7 +15,7 @@ export default function BasicExample() {
       <Header />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/flow" element={<Flow />} />
+        <Route path="/question?" element={<Question />} />
       </Routes>
     </Router>
   );

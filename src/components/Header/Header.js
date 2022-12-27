@@ -6,7 +6,7 @@ import Modal from 'components/Modal/Modal';
 import Groups from 'components/Groups/Groups';
 
 function Header() {
-  const [openModal, setOpenModal] = useState(true);
+  const [openModal, setOpenModal] = useState(false);
   const location = useLocation();
   const path = location.pathname;
 
@@ -16,7 +16,9 @@ function Header() {
 
   return (
     <header className="header">
-      <img src={GhostIcon} alt='icon' />
+      <a href={`/`}>
+        <img src={GhostIcon} alt='icon' />
+      </a>
 
       <h1>{routesTitle[path] || 'Questionary'}</h1>
 

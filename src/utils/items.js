@@ -8,26 +8,26 @@ export const HomeItems = [
   {
     name: 'Rompehielos',
     icon: <Snow />,
-    link: ''
+    link: 'icebreakers'
   },
   {
     name: 'Conexión',
     icon: <Connection />,
-    link: ''
+    link: 'connection'
   },
   {
     name: 'Intimidad',
     icon: <Intimacy />,
-    link: ''
+    link: 'intimacy'
   },
   {
     name: 'Incendiarias',
     icon: <Fire />,
-    link: ''
+    link: 'firestarters'
   },
   {
-    name: 'Personalizadas',
+    name: 'Aleatorias',
     icon: <Dice />,
-    link: ''
+    link: 'random'
   }
 ]

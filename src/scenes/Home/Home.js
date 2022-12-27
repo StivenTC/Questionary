@@ -7,8 +7,10 @@ function Home() {
       <ul>
         {HomeItems.map((item, index) =>
           <li key={index}>
-            <h2>{item.name}</h2>
-            {item.icon}
+            <a href={`question?type=${item.link}`}>
+              <h2>{item.name}</h2>
+              {item.icon}
+            </a>
           </li>
         )}
       </ul>

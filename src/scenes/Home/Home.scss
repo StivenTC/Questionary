@@ -8,6 +8,10 @@
     height: calc(100% - 3rem);
     margin-top: 3rem;
 
+    a {
+      color: inherit;
+    }
+
     >li {
       position: relative;
       @include flex-center;
@@ -17,7 +21,7 @@
       box-shadow: $shadow;
       cursor: pointer;
 
-      >h2 {
+      h2 {
         font-size: 1.5rem;
         text-transform: uppercase;
         color: $whitecity;
