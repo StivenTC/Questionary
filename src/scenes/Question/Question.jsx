@@ -10,7 +10,7 @@ function Question() {
   const [searchParams] = useSearchParams();
   const typeParam = searchParams.get('type');
   const [currentPlayer, setCurrentPlayer] = useState(0);
-  const [players] = useState(() => JSON.parse(localStorage.getItem('players')) || ['anonimo']);
+  const [players] = useState(() => JSON.parse(localStorage.getItem('players')) || ['anónimo']);
   const [currentQuestion, setCurrentQuestion] = useState(null);
 
   // Memoize questions with metadata to avoid recalculation and fragility
@@ -38,7 +38,8 @@ function Question() {
     return item || { name: 'Questionary', icon: null };
   };
 
-  const nextQuestion = () => {
+  const nextQuestion = React.useCallback(() => {
+    if (!activeList || activeList.length === 0) return;
     const randomIndex = Math.floor(Math.random() * activeList.length);
     const selected = activeList[randomIndex];
     setCurrentQuestion({
@@ -47,7 +48,13 @@ function Question() {
     });
     
     setCurrentPlayer(prev => (prev + 1) % players.length);
-  };
+  }, [activeList, players.length]);
+
+  React.useEffect(() => {
+    if (!currentQuestion) {
+      nextQuestion();
+    }
+  }, [nextQuestion, currentQuestion]);
 
   const headerInfo = currentQuestion ? getHeaderData(currentQuestion.type) : { name: '', icon: '' };
 

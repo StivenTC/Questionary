@@ -14,17 +14,12 @@ function Groups() {
 
 
   const handleKeyDown = event => {
-    console.log('down')
-    const value = event.target.value;
-    const list = players || [];
+    const value = event.target.value.trim();
 
     if (event.key === 'Enter') {
-      console.log('enter')
-      // setPlayers('')
-      list.push(value)
-      console.log(list)
-      setPlayers(prev => [...prev])
-      // localStorage.setItem('players', JSON.stringify(list));
+      if (!value) return; 
+      
+      setPlayers(prev => [...(prev || []), value]);
       event.target.value = '';
     }
   };
