@@ -22,7 +22,9 @@ function Header() {
 
       <h1>{routesTitle[path] || 'Questionary'}</h1>
 
-      <HiMenuAlt3 onClick={() => setOpenModal(true)} />
+      <button type="button" aria-label="Abrir menú" onClick={() => setOpenModal(true)}>
+        <HiMenuAlt3 />
+      </button>
 
       {openModal && <Modal closeModal={() => setOpenModal(false)} children={<Groups />} />}
 

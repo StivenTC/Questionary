@@ -29,10 +29,15 @@
         opacity: 0.5;
       }
 
-      >svg:last-child {
+      >button {
         margin-left: auto;
-        color: $firestarter;
-        opacity: .7;
+        background: transparent;
+        padding: 0;
+        
+        svg {
+          color: $firestarter;
+          opacity: .7;
+        }
       }
 
       &:after {

@@ -1,37 +1,19 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { Connection } from 'utils/connection';
-import { FireStarter } from 'utils/firestarter';
-import { IceBreakers } from 'utils/icebreakers';
-import { Intimacy } from 'utils/intimacy';
+import { useQuestions } from '../../hooks/useQuestions';
 import { HomeItems } from 'utils/items';
 
 function Question() {
   const [searchParams] = useSearchParams();
   const typeParam = searchParams.get('type');
   const [currentPlayer, setCurrentPlayer] = useState(0);
-  const [players] = useState(() => JSON.parse(localStorage.getItem('players')) || ['anónimo']);
+  const [players] = useState(() => {
+    const stored = JSON.parse(localStorage.getItem('players'));
+    return (stored && stored.length > 0) ? stored : ['anónimo'];
+  });
   const [currentQuestion, setCurrentQuestion] = useState(null);
 
-  // Memoize questions with metadata to avoid recalculation and fragility
-  const questionsMap = useMemo(() => {
-    const tag = (list, type) => list.map(text => ({ text, type }));
-
-    const ice = tag(IceBreakers, 'icebreakers');
-    const conn = tag(Connection, 'connection');
-    const int = tag(Intimacy, 'intimacy');
-    const fire = tag(FireStarter, 'firestarters');
-
-    return {
-      icebreakers: ice,
-      connection: conn,
-      intimacy: int,
-      firestarters: fire,
-      random: [...ice, ...conn, ...int, ...fire]
-    };
-  }, []);
-
-  const activeList = questionsMap[typeParam] || questionsMap.random;
+  const activeList = useQuestions(typeParam);
 
   const getHeaderData = (type) => {
     const item = HomeItems.find(i => i.link === type);
@@ -74,7 +56,7 @@ function Question() {
           </div>
         </article>
       )}
-      <button onClick={nextQuestion}>
+      <button type="button" onClick={nextQuestion}>
         {currentQuestion ? 'Siguiente' : 'Iniciar'}
       </button>
     </main>

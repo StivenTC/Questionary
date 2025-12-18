@@ -11,6 +11,7 @@ export default defineConfig({
       utils: path.resolve(__dirname, './src/utils'),
       assets: path.resolve(__dirname, './src/assets'),
       sass: path.resolve(__dirname, './src/sass'),
+      hooks: path.resolve(__dirname, './src/hooks'),
       logo: path.resolve(__dirname, './src/logo.svg'), // Specific alias for logo if imported absolutely
     },
   },

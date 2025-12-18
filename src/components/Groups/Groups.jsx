@@ -25,13 +25,10 @@ function Groups() {
   };
 
   const removeName = (name) => {
-    console.log('remove');
     const list = players.filter((arr) => arr !== name);
     localStorage.setItem('players', JSON.stringify(list));
     setPlayers(list);
   }
-
-  console.log(players);
 
   return (
     <div className='group'>
@@ -41,14 +38,21 @@ function Groups() {
           <li key={index}>
             <VscPerson />
             {name}
-            <TbTrashX onClick={() => removeName(name)} />
+            <button type="button" aria-label={`Eliminar a ${name}`} onClick={() => removeName(name)}>
+              <TbTrashX />
+            </button>
           </li>
         )}
       </ul>
 
       <label>
-        <input onKeyDown={(event) => handleKeyDown(event)} />
-        <VscPersonAdd />
+        <span className="sr-only">Nombre del jugador</span>
+        <input 
+          aria-label="Nombre del nuevo jugador"
+          placeholder="Escribe un nombre..."
+          onKeyDown={(event) => handleKeyDown(event)} 
+        />
+        <VscPersonAdd aria-hidden="true" />
       </label>
     </div>
   );

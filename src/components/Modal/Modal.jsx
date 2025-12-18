@@ -3,11 +3,16 @@ import React from 'react';
 function Modal({ closeModal, children }) {
 
   return (
-    <section className="modal">
+    <section className="modal" role="dialog" aria-modal="true">
       <div className="modal-container">
         {children}
       </div>
-      <div className="modal-backdrop" onClick={() => closeModal()} />
+      <button 
+        type="button" 
+        className="modal-backdrop" 
+        aria-label="Cerrar modal"
+        onClick={() => closeModal()} 
+      />
     </section>
   );
 }

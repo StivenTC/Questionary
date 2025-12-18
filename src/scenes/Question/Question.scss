@@ -12,8 +12,8 @@
     width: 80%;
     margin: 5rem auto 1rem;
     box-shadow: $shadow;
+    box-shadow: $shadow;
     color: $asbesto;
-    color: inherit;
     transition: all .2s ease-in;
 
     &-header {
@@ -102,7 +102,7 @@
     text-transform: uppercase;
     box-shadow: $shadow;
     font-weight: bolder;
+    font-weight: bolder;
     color: $asbesto;
-    color: inherit;
   }
 }
