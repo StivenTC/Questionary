@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# Questionary | [Link](https://questionary-9c8b1.web.app/)
+Este proyecto es un juego de preguntas diseñado para dispositivos móviles, con el objetivo de fortalecer las relaciones personales entre amigos.
+El juego presenta una variedad de tipos de preguntas, que incluyen rompehielos, conexión, intimidad, incendiarias y preguntas aleatorias. Ten en cuenta que este juego está diseñado para dispositivos móviles y puede no abarcar toda la pantalla en dispositivos más grandes.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Características
 
-## Available Scripts
+-**Tipos de preguntas:** El juego incluye diferentes categorías de preguntas, como rompehielos, conexión, intimidad, incendiarias y preguntas aleatorias. Esto permite que los jugadores exploren una amplia gama de temas y generen conversaciones interesantes.
 
-In the project directory, you can run:
+-**Interfaz móvil:** La interfaz de usuario está diseñada específicamente para dispositivos móviles, brindando una experiencia de juego optimizada para pantallas más pequeñas.
 
-### `npm start`
+-**Proyecto personal:** Este juego ha sido creado como un proyecto personal para diversión con amigos. Las preguntas se obtuvieron de distintas fuentes de Internet para proporcionar una variedad de desafíos y temas.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-**Hosting en Firebase:** El proyecto utiliza Firebase únicamente como plataforma de hosting para alojar el juego en línea.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tecnologías utilizadas
 
-### `npm test`
+-**React.js:** La aplicación está desarrollada utilizando la biblioteca React.js para crear una interfaz de usuario interactiva y receptiva.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-**HTML y CSS:** Se utilizan HTML y CSS para estructurar y diseñar la interfaz de usuario móvil del juego.
 
-### `npm run build`
+-**JavaScript:** El juego está impulsado por JavaScript para manejar la lógica del juego y las interacciones con el usuario.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-**Firebase (Hosting):** Firebase se utiliza como plataforma de hosting para alojar el juego y permitir el acceso en línea.
