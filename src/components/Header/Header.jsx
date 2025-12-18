@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import GhostIcon from 'assets/question.png';
 import { HiMenuAlt3 } from 'react-icons/hi';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import Modal from 'components/Modal/Modal';
 import Groups from 'components/Groups/Groups';
 
@@ -16,9 +16,9 @@ function Header() {
 
   return (
     <header className="header">
-      <a href={`/`}>
+      <Link to={`/`}>
         <img src={GhostIcon} alt='icon' />
-      </a>
+      </Link>
 
       <h1>{routesTitle[path] || 'Questionary'}</h1>
 

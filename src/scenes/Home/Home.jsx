@@ -1,5 +1,6 @@
 import React from 'react';
 import { HomeItems } from 'utils/items';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -7,10 +8,10 @@ function Home() {
       <ul>
         {HomeItems.map((item, index) =>
           <li key={index}>
-            <a href={`question?type=${item.link}`}>
+            <Link to={`question?type=${item.link}`}>
               <h2>{item.name}</h2>
               {item.icon}
-            </a>
+            </Link>
           </li>
         )}
       </ul>
